@@ -1,0 +1,26 @@
+button{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #33bbca;
+    color: #fff;
+    outline: none;
+    border: none;
+    
+    box-shadow: 3px 3px rgba(0,0,0,0.2);
+    padding: 10px;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgba(76, 206, 198, 0.968);
+    
+}
+
+
+button:active{
+    box-shadow: none;
+}
+
+body{
+    display: flex;
+}
