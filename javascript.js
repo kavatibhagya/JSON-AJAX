@@ -21,17 +21,42 @@ var btn = document.getElementById("btn");
   function renderHTML(data){
       var HTMLString = "";
          
-      for(i=0; i<data.length; i++){
-          HTMLString += "<p>" + data[i].name + " is a " + data[i].species + "</p>";
-      }
+      for(i=0; i<data.length; i++)
+      {
+          HTMLString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
+          for(j=0; j<data[i].foods.likes.length; j++)
+          {
+              if(j== 0)
+              {
+                HTMLString += data[i].foods.likes[j];
+              }
+            else
+            {
+               HTMLString += " and " +data[i].foods.likes[j];
+            }
+          }
+          HTMLString += " and dislikes ";
+          for(j=0; j<data[i].foods.dislikes.length; j++)
+          {
+             if(j== 0)
+             {
+                HTMLString += data[i].foods.dislikes[j];
+             }
+             else
+              {
+                 HTMLString += " and " +data[i].foods.dislikes[j];
+              }
 
+             HTMLString += "</p>";
+          }
 
+        }
 
 
       animalContainer.insertAdjacentHTML('beforeend', HTMLString);
       
 
-  }
+ }
 
 
 
